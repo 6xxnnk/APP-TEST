@@ -4,7 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/index.css""
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css"">
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        window.onload = () => {
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 2.5,
+                spaceBetween: 15,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+
+                // centeredSlides: true,
+                autoplay: {
+                    delay: 3000, //3초 
+                    disableOnInteraction: false,
+                },
+                speed: 1000
+            });
+        }
+    </script>
+    
 </head>
 <body>
     <div id="wrap">
@@ -17,11 +45,11 @@
 
             <div class="icon">
                 <a href="search">
-                <img src="img/search-icon.jpg">
+                <img src="img/search.jpg">
                 </a>
                 
                 <a href="cart">
-                <img src="img/cart-icon.jpg">
+                <img src="img/cart..jpg">
                 </a>
             </div><!-- icon -->
             </div><!-- top -->
@@ -48,41 +76,59 @@
                 </div><!-- text -->
             </div><!-- main_visual -->
 
-            <div class="featured">
-                <h2>featured</h2>
-                <div class="product_list">
-                    <div class="item1">
-                        <div class="img">
-                        <img src="img/featured_product1.jpg">
-                        <p>quick add</p>
-                        </div><!-- img -->
+            <div class="section">
+                <h2>bestsellers</h2>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="img">
+                            <img src="img/featured_product1.jpg">
+                            <a href="#">quick add</a>
+                            </div><!-- img -->
 
-                        <div class="text">
-                        <h1>product Name 1</h1>
-                        <p>product details</p>
-                        <span>$15</span>
-                        </div><!-- text -->
-                    </div><!-- product_item1 -->
+                            <div class="text">
+                                <h1>product Name 1</h1>
+                                <p>product details</p>
+                                <span>$15</span>
+                            </div><!-- text -->
+                        </div><!--swiper-slide  -->
+                        <div class="swiper-slide">
+                            <div class="img">
+                            <img src="img/featured_product2.jpg">
+                            <a href="#">quick add</a>
+                            </div><!-- img -->
 
-                    <div class="item2">
-                        <div class="img">
-                        <img src="img/featured_product2.jpg">
-                        <p>quick add</p>
-                        </div><!-- img -->
+                            <div class="text">
+                                <h1>product Name 1</h1>
+                                <p>product details</p>
+                                <span>$15</span>
+                            </div><!-- text -->
+                        </div><!--swiper-slide  -->
+                        <div class="swiper-slide">
+                            <div class="img">
+                            <img src="img/featured_product3.jpg">
+                            <a href="#">quick add</a>
+                            </div><!-- img -->
 
-                        <div class="text">
-                        <h1>product Name 1</h1>
-                        <p>product details</p>
-                        <span>$15</span>
-                        </div><!-- text -->
-                    </div><!-- item2 -->
-                </div><!-- product_list -->
+                            <div class="text">
+                                <h1>product Name 1</h1>
+                                <p>product details</p>
+                                <span>$15</span>
+                            </div><!-- text -->
+                        </div><!--swiper-slide  -->
+                    </div><!-- swiper-wrapper -->
+ 
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                </div><!-- swiper mySwiper -->
+
 
                 <div class="shop_bestsellers">
                     <a href="#">shop bestsellers</a>
                 </div><!--shop_bestsellers  -->
                 
-            </div><!-- featured -->
+            </div><!-- section -->
 
             <div class="promotion">
                 <img src="img/promotion.jpg">
