@@ -6,37 +6,41 @@
     <title>Document</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css"">
     
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/index.css"">
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script>
-        window.onload = () => {
+     window.onload = () => {
             var swiper = new Swiper(".mySwiper", {
-                slidesPerView: 2.5,
-                spaceBetween: 15,
+                slidesPerView: 1.5,
+                spaceBetween: 16,
                 pagination: {
                     el: ".swiper-pagination",
                     clickable: true,
                 },
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2.5,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 3.5,
+                        spaceBetween: 20,
+                    },
+                    1024: {
+                        slidesPerView: 4.5,
+                        spaceBetween: 28,
+                    },
                 },
-
-                // centeredSlides: true,
-                autoplay: {
-                    delay: 3000, //3초 
-                    disableOnInteraction: false,
-                },
-                speed: 1000
             });
         }
-    </script>
+</script>
     
 </head>
 <body>
     <div id="wrap">
-    
         <div class="header">
             <div class="top">
             <a href="logo">
@@ -85,42 +89,43 @@
                             <img src="img/featured_product1.jpg">
                             <a href="#">quick add</a>
                             </div><!-- img -->
+                            <li>Futuredew Solid</li>
 
                             <div class="text">
-                                <h1>product Name 1</h1>
-                                <p>product details</p>
+                                <p>Oil-serum illuminator</p>
                                 <span>$15</span>
                             </div><!-- text -->
                         </div><!--swiper-slide  -->
+
                         <div class="swiper-slide">
                             <div class="img">
                             <img src="img/featured_product2.jpg">
                             <a href="#">quick add</a>
                             </div><!-- img -->
 
-                            <div class="text">
-                                <h1>product Name 1</h1>
+                            
+                                <li>product Name 1</li>
+                                <div class="text">
                                 <p>product details</p>
                                 <span>$15</span>
                             </div><!-- text -->
                         </div><!--swiper-slide  -->
+
                         <div class="swiper-slide">
                             <div class="img">
-                            <img src="img/featured_product3.jpg">
+                            <img src="img/featured_product1.jpg">
                             <a href="#">quick add</a>
                             </div><!-- img -->
 
-                            <div class="text">
-                                <h1>product Name 1</h1>
+                                <li>product Name 1</li>
+                                <div class="text">
                                 <p>product details</p>
                                 <span>$15</span>
                             </div><!-- text -->
                         </div><!--swiper-slide  -->
-                    </div><!-- swiper-wrapper -->
- 
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                    </div><!-- swiper-wrapper -->  
+                    <div class="swiper-pagination">
+                    </div>
                 </div><!-- swiper mySwiper -->
 
 
